@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Challenge Développement Web - Jour 01</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lpt-black': '#0a0a0a',
+            'lpt-yellow': '#FFD700',
+            'lpt-kiko': '#FFB800',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif', 'system-ui'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+    
+    .challenge-title {
+      font-size: clamp(4rem, 15vw, 10rem);
+      letter-spacing: -0.02em;
+    }
+    
+    .bracket-yellow {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body class="bg-lpt-black text-white font-sans min-h-screen flex flex-col overflow-x-hidden">
+<!-- BEGIN: MainHeader -->
+<header class="p-6 md:p-10 flex justify-between items-center w-full z-10" data-purpose="site-navigation">
+<!-- Brand Logo -->
+<div class="flex items-center gap-3" data-purpose="brand-logo">
+<div class="w-10 h-10 flex items-center justify-center">
+<svg class="w-full h-full fill-lpt-yellow" viewbox="0 0 100 100">
+<path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="#FFD700" stroke-width="8"></path>
+<path d="M50 20 L80 50 L50 80 L20 50 Z" fill="#FFD700"></path>
+</svg>
+</div>
+<div class="flex flex-col leading-none font-bold text-xl uppercase">
+<span>Les Pros</span>
+<span class="text-white">de la Tech</span>
+</div>
+</div>
+<!-- Header Stats -->
+<div class="flex items-center gap-6" data-purpose="header-meta">
+<span class="text-2xl font-bold">Jour 01</span>
+
+<a class="hover:underline" href="Propos.html">A propos</a>
+<a class="hover:underline" href="mission.html">Mission</a>
+<div class="bg-lpt-kiko text-black px-4 py-1.5 rounded-full flex items-center gap-2 font-bold text-sm md:text-base">
+<span>10 KIKO</span>
+<div class="bg-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-black">K</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-20 text-center relative z-10" data-purpose="hero-section">
+<!-- Title Block -->
+<div class="mb-8" data-purpose="main-title-block">
+<h1 class="challenge-title font-extrabold flex items-center justify-center gap-4">
+<span class="bracket-yellow">{</span>
+<span>Challenge</span>
+<span class="bracket-yellow">}</span>
+</h1>
+<h2 class="text-4xl md:text-6xl font-light -mt-4 mb-2">Développement Web</h2>
+<p class="text-sm md:text-base italic opacity-80">Les bonus de 05 Kikos sont à moi!!</p>
+<p class="text-sm md:text-base italic opacity-80">-------By Sophos-------</p>
+</div>
+<!-- Divider -->
+<div class="w-full max-w-3xl h-[1px] bg-white opacity-30 my-12" data-purpose="section-divider"></div>
+<!-- CTA Text -->
+<div data-purpose="call-to-action">
+<p class="text-2xl md:text-4xl font-medium">Ma première page HTML</p>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="p-8 md:p-12 mt-auto relative z-10" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8">
+<!-- Social and Links -->
+<div class="space-y-4" data-purpose="footer-socials">
+<div class="flex items-center gap-3">
+<!-- Simplified Icon Placeholders -->
+<div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-xs font-bold">f</div>
+<div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-xs font-bold">in</div>
+<div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-xs font-bold">YT</div>
+<div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-xs font-bold">Tk</div>
+<span class="text-xl font-semibold ml-2">Les pros de la tech</span>
+</div>
+<div class="text-sm opacity-80 flex flex-col">
+<a class="hover:underline" href="https://www.lesprodelatech.com">www.lesprodelatech.com</a>
+<a class="hover:underline" href="https://challenges.lesprodelatech.com">challenges.lesprodelatech.com</a>
+</div>
+
+</div>
+<!-- Hashtags -->
+<div class="text-right font-bold text-xl md:text-2xl" data-purpose="footer-hashtags">
+<p>#LPT</p>
+<p>#ChallengeLPT</p>
+<p>#LesProsDeLaTech</p>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- début:Graphics -->
+<div class="fixed bottom-0 left-0 w-full flex justify-between items-end pointer-events-none px-4 md:px-0 translate-y-1/4" data-purpose="decorative-shapes">
+<!-- trapèze vert  -->
+<div class="w-1/6 aspect-square bg-green-500 opacity-80 blur-sm" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+<!-- Trapèze violet -->
+<div class="w-1/6 aspect-square bg-white opacity-80 blur-sm" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+<!-- trapèze violet -->
+<div class="w-1/6 aspect-square bg-purple-600 opacity-80 blur-sm" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+<!-- Trapèze Blue -->
+<div class="w-1/6 aspect-square bg-blue-600 opacity-80 blur-sm" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+<!-- Trapèze jaune  -->
+<div class="w-1/6 aspect-square bg-yellow-400 opacity-80 blur-sm" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+<!-- Trapèze rouge -->
+<div class="w-1/6 aspect-square bg-red-600 opacity-80 blur-sm" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+</div>
+<!-- Fin: graphics-->
+</body></html>
